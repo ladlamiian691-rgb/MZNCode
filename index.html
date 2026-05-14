@@ -1,28 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Mijan Website</title>
-  <style>
-    body{
-      background:black;
-      color:white;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      font-family:Arial;
-      flex-direction:column;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mijan Aesthetic</title>
 
-    h1{
-      color:#00aaff;
-      font-size:60px;
-    }
-  </style>
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:black;
+overflow:hidden;
+color:white;
+}
+
+.container{
+text-align:center;
+animation:fade 2s ease;
+}
+
+h1{
+font-size:70px;
+color:#00aaff;
+text-shadow:0 0 20px #00aaff;
+letter-spacing:5px;
+}
+
+p{
+margin-top:10px;
+font-size:18px;
+color:#ccc;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 30px;
+border-radius:30px;
+background:#00aaff;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.4s;
+box-shadow:0 0 15px #00aaff;
+}
+
+.btn:hover{
+background:white;
+color:black;
+transform:scale(1.1);
+}
+
+.circle{
+position:absolute;
+width:300px;
+height:300px;
+background:#00aaff30;
+border-radius:50%;
+filter:blur(100px);
+animation:move 6s infinite alternate;
+}
+
+.circle2{
+top:10%;
+left:10%;
+}
+
+.circle3{
+bottom:10%;
+right:10%;
+}
+
+@keyframes move{
+from{
+transform:translateY(0px);
+}
+to{
+transform:translateY(50px);
+}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
 </head>
-
 <body>
-  <h1>MIJAN</h1>
-  <p>Welcome to my aesthetic website ✨</p>
+
+<div class="circle circle2"></div>
+<div class="circle circle3"></div>
+
+<div class="container">
+
+<h1>MIJAN</h1>
+
+<p>Welcome to my dark aesthetic website ✨</p>
+
+<a href="https://instagram.com/" class="btn">
+My Instagram
+</a>
+
+</div>
+
 </body>
 </html>
